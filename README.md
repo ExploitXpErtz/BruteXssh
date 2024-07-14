@@ -47,11 +47,11 @@ BruteXssh is intended for educational and ethical hacking purposes. It aims to a
 
 ## Usage
 ### I will use Single target for this Example:
-- Run the Tool
+1. Run the Tool
 ![Step One](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/1.png)
-- Set the Values
+2. Set the Values
 ![Step Two](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/2.png)
-- Start Bruteforce and wait for Response
+3. Start Bruteforce and wait for Response
 ![Step Three](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/3.png)
 
 ## Disclaimer
