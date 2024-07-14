@@ -46,8 +46,13 @@ BruteXssh is intended for educational and ethical hacking purposes. It aims to a
 - [Download BruteXssh Python Version](https://github.com/ExploitXpErtz/BruteXssh/releases/latest/download/BruteXssh.py)
 
 ## Usage
+### I will use Single target for this Example:
 - Run the Tool
 - ![Step One](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/1.png)
+- Set the Values
+- ![Step Two](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/2.png)
+- Start Bruteforce and wait for Response
+- ![Step Three](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/3.png)
 
 ## Disclaimer
 Any actions and activities related to BruteXssh are your sole responsibility. Misuse of this tool may lead to criminal charges. The contributors are not liable for any legal consequences arising from the misuse of this toolkit. This tool is intended for educational purposes only. Do not use it to violate the law.
