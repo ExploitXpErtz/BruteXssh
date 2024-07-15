@@ -1,5 +1,7 @@
 # BruteXssh by ExploitXpErtz
 
+![BruteXssh](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/brutexssh.jpeg)
+
 ## Introduction
 BruteXssh is an advanced GUI-based SSH cracker powered by Python libraries. It employs parallel processing, supports mass target selection, allows custom thread levels, and offers proxy functionality to enhance SSH cracking efficiency.
 
