@@ -67,6 +67,7 @@ BruteXssh is intended for educational and ethical hacking purposes. It aims to a
 - **Facebook:** https://www.facebook.com/profile.php?id=61559010484365
 - **Youtube:** https://www.youtube.com/@0xExploitXpErtz
 
+<p style="text-align: center;">Text_content</p>
 
 ## Disclaimer
 Any actions and activities related to BruteXssh are your sole responsibility. Misuse of this tool may lead to criminal charges. The contributors are not liable for any legal consequences arising from the misuse of this toolkit. This tool is intended for educational purposes only. Do not use it to violate the law.
