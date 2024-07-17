@@ -56,6 +56,18 @@ BruteXssh is intended for educational and ethical hacking purposes. It aims to a
 3. Start Bruteforce and wait for Response
 ![Step Three](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/3.png)
 
+## Be a Part of Our Community
+
+![ExploitXpErtz](https://github.com/user-attachments/assets/a58fc0f8-4820-4e33-83dc-8471bf4d05d2)
+
+
+- **LinkedIn Community:** https://www.linkedin.com/groups/9855336/
+- **LinkedIn Page:** https://www.linkedin.com/company/102537462/
+- **Whatsapp Community:** https://chat.whatsapp.com/FCIy96YOqVX2qNYxMOuVDz
+- **Facebook:** https://www.facebook.com/profile.php?id=61559010484365
+- **Youtube:** https://www.youtube.com/@0xExploitXpErtz
+
+
 ## Disclaimer
 Any actions and activities related to BruteXssh are your sole responsibility. Misuse of this tool may lead to criminal charges. The contributors are not liable for any legal consequences arising from the misuse of this toolkit. This tool is intended for educational purposes only. Do not use it to violate the law.
 
