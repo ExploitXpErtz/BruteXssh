@@ -2,8 +2,15 @@
 
 ![BruteXssh](https://raw.githubusercontent.com/ExploitXpErtz/BruteXssh/main/brutexssh.jpeg)
 
-## Introduction
+## Tool Introduction
 BruteXssh is an advanced GUI-based SSH cracker powered by Python libraries. It employs parallel processing, supports mass target selection, allows custom thread levels, and offers proxy functionality to enhance SSH cracking efficiency.
+
+## *SSH:*
+	SSH stands for Secure Shell. It is a protocol that allows users to securely log into their computers remotely and execute commands with full access.
+
+## *SSH Cracking:*
+    SSH Cracking is an attack where a hacker tries to break into a system by using thousands of random usernames and passwords. This process, known as bruteforcing, aims to exploit weak credentials. Once the hacker succeeds, they’ve hacked into the system, gaining unauthorized access and control over the whole system including all media files and folders
+
 
 ## Features
 - **Single and Mass Targets**: Attack single or multiple targets simultaneously.
