@@ -49,10 +49,6 @@ BruteXssh is intended for educational and ethical hacking purposes. It aims to a
     .\BruteXssh.exe
     ```
 
-## Other Installations:
-- [Linux](https://github.com/ExploitXpErtz/BruteXssh/releases/download/linux/BruteXssh.elf)
-- [Windows](https://github.com/ExploitXpErtz/BruteXssh/releases/download/linux/BruteXssh.exe)
-
 ## Releases
 - [Download BruteXssh for Windows](https://github.com/ExploitXpErtz/BruteXssh/releases/latest/download/BruteXssh.exe)
 - [Download BruteXssh for Linux](https://github.com/ExploitXpErtz/BruteXssh/releases/latest/download/BruteXssh.elf)
