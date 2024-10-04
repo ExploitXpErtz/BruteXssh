@@ -13,7 +13,7 @@ import base64
 from io import BytesIO
 from PIL import Image
 
-# Your Base64 string for logo.png (replace with your actual Base64 data)
+
 base64_logo = """iVBORw0KGgoAAAANSUhEUgAAAWcAAABjCAIAAADIPFZ4AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAg
 AElEQVR4nJS9abRt2VUe9n1r7XPufa9evVeNSqW2SgKhxthYIFpZAtMK4waDkUNsRhIyhiGQ2FFi
 Y5wREyfGNgFnQDKGBzaO7QRQ7DimxwZsggmtHJvWohEKICGhvvp6zb337D2//JjNWudW2Yij0n33
@@ -589,14 +589,11 @@ ipnMlsmhra0bjPtfxbQDHH/CRRxnAOR6TBEE94PMa25zefpAm+tFeSguK9/kzijSajH8P1HLFdSt
 0Dr0AAAAAElFTkSuQmCC
 """
 
-# Decode the Base64 string
 logo_data = base64.b64decode(base64_logo)
 
-# Convert the binary data to an image
 logo_image = Image.open(BytesIO(logo_data))
-logo_image.save('temp_logo.png')  # Save temporarily for QPixmap
+logo_image.save('temp_logo.png')
 
-# Setup logging
 logging.basicConfig(filename="ssh_bruteforce.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class SSHBruteforceWorker(QThread):
@@ -689,15 +686,12 @@ class SSHBruteforceGUI(QMainWindow):
         
         QApplication.setStyle(QStyleFactory.create('Fusion'))
 
-        # Central widget
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         
-        # Layout
         layout = QVBoxLayout()
         central_widget.setLayout(layout)
 
-        # Set custom stylesheet for styling
         self.setStyleSheet("""
             QMainWindow {
                 background-color: #000000;
@@ -736,14 +730,12 @@ class SSHBruteforceGUI(QMainWindow):
             }
         """)
 
-        # Logo
         self.logo_label = QLabel(self)
-        pixmap = QPixmap('temp_logo.png')  # Use the temporary saved logo
+        pixmap = QPixmap('temp_logo.png')
         self.logo_label.setPixmap(pixmap)
         self.logo_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.logo_label)
 
-        # Target selection
         target_layout = QHBoxLayout()
         layout.addLayout(target_layout)
         target_label = QLabel('Select Target:')
@@ -753,7 +745,6 @@ class SSHBruteforceGUI(QMainWindow):
         target_layout.addWidget(self.target_combo)
         self.target_combo.currentIndexChanged.connect(self.toggle_target_input)
 
-        # Target inputs
         self.single_target_input = QLineEdit(self)
         self.single_target_input.setPlaceholderText('Enter Single Target IP/Host')
         layout.addWidget(self.single_target_input)
@@ -765,8 +756,7 @@ class SSHBruteforceGUI(QMainWindow):
         layout.addWidget(self.file_target_button)
         self.file_target_input.hide()
         self.file_target_button.hide()
-
-        # Username selection
+        
         username_layout = QHBoxLayout()
         layout.addLayout(username_layout)
         username_label = QLabel('Select Username:')
@@ -776,7 +766,6 @@ class SSHBruteforceGUI(QMainWindow):
         username_layout.addWidget(self.username_combo)
         self.username_combo.currentIndexChanged.connect(self.toggle_username_input)
 
-        # Username inputs
         self.single_username_input = QLineEdit(self)
         self.single_username_input.setPlaceholderText('Enter Single Username')
         layout.addWidget(self.single_username_input)
@@ -789,7 +778,6 @@ class SSHBruteforceGUI(QMainWindow):
         self.file_username_input.hide()
         self.file_username_button.hide()
 
-        # Password selection
         password_layout = QHBoxLayout()
         layout.addLayout(password_layout)
         password_label = QLabel('Select Password:')
@@ -799,7 +787,6 @@ class SSHBruteforceGUI(QMainWindow):
         password_layout.addWidget(self.password_combo)
         self.password_combo.currentIndexChanged.connect(self.toggle_password_input)
 
-        # Password inputs
         self.single_password_input = QLineEdit(self)
         self.single_password_input.setPlaceholderText('Enter Single Password')
         layout.addWidget(self.single_password_input)
@@ -811,8 +798,7 @@ class SSHBruteforceGUI(QMainWindow):
         layout.addWidget(self.file_password_button)
         self.file_password_input.hide()
         self.file_password_button.hide()
-
-        # Threads, retries, timeout, proxy
+        
         options_layout = QHBoxLayout()
         layout.addLayout(options_layout)
 
@@ -848,18 +834,15 @@ class SSHBruteforceGUI(QMainWindow):
         self.proxy_input.setPlaceholderText('Enter Proxy (Optional)')
         proxy_layout.addWidget(self.proxy_input)
 
-        # Progress bar and remaining time
         self.progress_bar = QProgressBar(self)
         layout.addWidget(self.progress_bar)
         self.remaining_time_label = QLabel('', self)
         layout.addWidget(self.remaining_time_label)
 
-        # Log output
         self.log_output = QTextEdit(self)
         self.log_output.setReadOnly(True)
         layout.addWidget(self.log_output)
 
-        # Start button
         start_button = QPushButton('Start SSH Bruteforce', self)
         start_button.clicked.connect(self.start_bruteforce)
         layout.addWidget(start_button)
